@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+
+    <h1>Listado de Sports:</h1>
+    
+        {% for sport in sports %}
+        <li>
+            <a href="{% url 'SportsDetail' sport.id %}" class="text-xl-start">
+            {{sport}}
+            </a>
+        </li>
+
+            <p>
+
+            </p>
+<div style="display: flex; column-gap: 5px">
+       
+    <button>
+        <a href="{% url 'SportsDelete' sport.id %}"> Eliminar </a>
+    </button>
+
+    <button>
+        <a href="{% url 'SportsUpdate' sport.id %}"> Editar </a>
+    </button>
+
+    </div> 
+        
+    
+    {% endfor %}
+</ul>
+ {% comment %} <a href="{% url 'nuevoProfe' %}">| Crear Profesor |</a>  {% endcomment %}
+
+
+{% endblock ReciclableContenido %}

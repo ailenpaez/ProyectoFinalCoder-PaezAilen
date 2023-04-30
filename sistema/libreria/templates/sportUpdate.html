@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+
+<h2>Actualizar Sport</h2>
+
+<form action="{% url 'SportsUpdate' sport.id %}" method="post"> {% csrf_token %}
+
+    {{form.as_p}}
+
+    <input type="submit" value="Actualizar">
+
+</form>
+
+{% endblock ReciclableContenido %}

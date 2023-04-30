@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+
+<h2>Eliminar un Sport</h2>
+
+    <form method="post"> {% csrf_token %}
+
+        <p>Está seguro de eliminar este registro?</p>
+            <button type="submit"> Confirmar </button>
+            <button><a href="{% url 'Inicio' %}">Cancelar</a></button>
+
+    </form>
+
+{% endblock ReciclableContenido %}

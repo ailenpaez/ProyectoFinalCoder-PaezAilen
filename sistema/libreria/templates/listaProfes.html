@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+
+<h1>Listado de profesores:</h1>
+<ul>
+    {% for profesor in profesores %}
+    <li>
+        {{profesor}}
+    </li>
+    <div style="display: flex; column-gap: 5px">
+        
+        <form action="{% url 'eliminarProfesor' profesor.id %}" method="post">
+            {% csrf_token %}            
+            <button type="submit"> Eliminar </button>
+        </form>
+
+        <button>
+            <a href="{% url 'editarProfesor' profesor.id %}"> Editar </a>
+        </button>
+
+    </div>
+        
+    
+    {% endfor %}
+</ul>
+<a href="{% url 'nuevoProfe' %}">| Crear Profesor |</a>
+
+{% endblock ReciclableContenido %}

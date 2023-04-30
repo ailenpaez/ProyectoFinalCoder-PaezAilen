@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block ReciclableContenido %}
+
+
+<p>Estamos buscando las clases del nivel {{nivel}} </p>
+
+    {% if entrenamiento %}
+    <ul>
+        {% for entrenamiento in entrenamiento %}
+        <li>
+            {{entrenamiento.nombre}}    |   {{entrenamiento.nivel}}
+        </li>
+        {% endfor %}
+
+
+    </ul>
+    {% else %}
+
+    <p>No se encontró ninguna clase. Probá con otro nivel!</p>
+    
+    {% endif %}
+
+{% endblock ReciclableContenido %}

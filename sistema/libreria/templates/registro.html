@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+
+
+<form action="{% url 'Register' %}" method="post"> {% csrf_token %}
+
+    {{miForm.as_p}}
+
+    <button type="submit">Registrar</button>
+
+</form>
+
+
+
+{% endblock ReciclableContenido %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block ReciclableContenido %}
+
+<h1> Vista en detalle del Sport! </h1>
+<h3 style="text-align: center;" >Deporte: {{sport.nombre}} | Nivel: {{sport.nivel}} </h3>
+
+<div> 
+    <p class="fw-bolder" style="text-align: center;">Bienvenidos a MySports!
+
+    </p>
+        <p style="text-align: center;">     En nuestro sistema cada deporte cuenta con tres niveles de dificultad, diseñados para que el alumno avance progresivamente en su aprendizaje.</p>
+        <p style="text-align: center;">     Cada nivel presenta distintos desafíos y exigencias, para que el alumno pueda desarrollar su potencial al máximo.</p> 
+        <p style="text-align: center;">     Además, ofrecemos una clase de prueba para que el alumno pueda evaluar su nivel actual y elegir el nivel adecuado para su aprendizaje. </p>
+
+        <p class="fst-italic" style="text-align: center;">¡Ven y descubre todo lo que nuestro sistema de deportes tiene para ofrecer!</p>
+</div>
+
+
+{% endblock ReciclableContenido %}

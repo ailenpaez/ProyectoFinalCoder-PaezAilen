@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block ReciclableContenido %}
+
+<h1>Agregar un nuevo profesor</h1>
+
+<form action="{% url 'nuevoProfe' %}" method="POST"> {% csrf_token %}
+
+    {{miForm.as_p}}
+    <button type="submit">| Enviar |</button>
+    <p>
+
+
+    </p>
+    <div>
+        <button href="{% url 'nuevoProfe' %}"type="button" class="btn btn-secondary">Crear Profesor</button>
+    </div>
+</form>
+
+
+{% endblock ReciclableContenido %}
+    

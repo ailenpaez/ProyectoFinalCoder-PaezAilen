@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block ReciclableContenido %}
+
+<h1>Consultanos por clases disponibles!</h1>
+
+<form action="{% url 'Contacto' %}" method="POST"> {% csrf_token %}
+
+    {{miContacto.as_p}}
+    <button type="submit">| Enviar |</button>
+    <p>
+
+
+
+    </p>
+</form>
+
+
+{% endblock ReciclableContenido %}
+    

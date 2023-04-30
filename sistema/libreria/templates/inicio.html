@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block ReciclableContenido %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+  </head>
+  
+<body>
+    <div class="centrado">
+        <img height="100px" src="{% static 'assets/img/box.png' %}" alt="..." />
+        <img height="100px" src="{% static 'assets/img/swim.png' %}" alt="..." />
+        <img height="100px" src="{% static 'assets/img/run.png' %}" alt="..." />
+        <img height="100" src="{% static 'assets/img/yoga.png' %}" alt="..." />
+    </div>
+
+    <h1 class="fw-bolder" style="text-align: center;">¡Nuestra página web dedicada a los deportistas!</h1>
+    <p style="text-align: center;">Aquí encontrarás todo lo que necesitas para mantenerte en forma y llevar tus habilidades al siguiente nivel.</p>
+    <p style="text-align: center;">Ofrecemos acceso a una amplia variedad de clases deportivas de alta calidad con profesores expertos en cada disciplina.</p>
+    <p style="text-align: center;">Cada clase cuenta con tres niveles de dificultad, diseñados para que el alumno avance progresivamente en su aprendizaje.</p>
+    <p style="text-align: center;">Cada nivel presenta distintos desafíos y exigencias, para que el alumno pueda desarrollar su potencial al máximo.</p> 
+    <p style="text-align: center;">Además, ofrecemos una clase de prueba para que el alumno pueda evaluar su nivel actual y elegir el nivel adecuado para su aprendizaje.</p>
+    <p class="fst-italic" style="text-align: center;">¡Regístrate y comienza a explorar todas las opciones que tenemos para ti!</p>
+
+    <div style="text-align:center;">
+        <a href="{% url 'Asistencias' %}" style="color:blue; font-size:24px;">Asiste a tu clase de prueba!</a>
+    </div>
+
+</body>
+{% endblock ReciclableContenido %}

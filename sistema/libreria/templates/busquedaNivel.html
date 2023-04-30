@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block ReciclableContenido %}
+
+
+<form action="{% url 'Search' %}" method="get"> {% csrf_token %}
+
+   <br> <p>Seleccione su nivel: <input type='number' name='nivel' id=''></p></form>
+
+   
+   <button type="submit">| Buscar |</button>
+
+</form>
+
+
+{% endblock ReciclableContenido %}
